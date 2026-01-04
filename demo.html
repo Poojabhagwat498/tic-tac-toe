@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb Toggler</title>
+
+    <style>
+        body {
+            background-color: #f5efe6;
+        }
+
+        .app_heading {
+            text-align: center;
+            color: #000;
+            font-size: 50px;
+        }
+
+        .container {
+            border: 1px solid #000;
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e8dfca;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .img-bulb {
+            width: 130px;
+            height: 140px;
+        }
+
+        .btn {
+            color: #000;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 180px;
+            font-size: 28px;
+            margin: 10px 20px;
+        }
+
+        .btn_on {
+            background-color: #9ae66e;
+        }
+
+        .btn_off {
+            background-color: #6d94c5;
+        }
+
+        .btn_container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .container {
+                width: 90%;
+            }
+
+            .btn {
+                width: 140px;
+                font-size: 24px;
+                padding: 5px 10px;
+            }
+
+            .img-bulb {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="app_heading">Bulb Toggler</h1>
+
+    <div class="container">
+        <img src="../images/lightbulb (1).png"" class="img-bulb" id="img-bulb" />
+
+        <div class="btn_container">
+            <button class="btn btn_off" onclick="bulbOff()">Turn Off</button>
+            <button class="btn btn_on" onclick="bulbOn()">Turn On</button>
+        </div>
+    </div>
+
+    <script>
+        function bulbOn() {
+            document.getElementById("img-bulb").src = "../images/lightbulb.png";
+        }
+
+        function bulbOff() {
+            document.getElementById("img-bulb").src = "../images/lightbulb (1).png";
+        }
+    </script>
+
+</body>
+
+</html>
